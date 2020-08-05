@@ -2,17 +2,21 @@
   <div id="app">
     <my-header>{{ headerTitle }}</my-header>
     <router-view />
+    <tab />
   </div>
 </template>
 <script>
   import MyHeader from '@/components/header'
+  import Tab from '@/components/tab/index'
+
   import { computed } from 'vue'
   import { useRouter } from 'vue-router'
   import { useStore } from 'vuex'
   export default {
     name: 'App',
     components: {
-      MyHeader
+      MyHeader,
+      Tab
     },
     setup(){
       const store = useStore(),

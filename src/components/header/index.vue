@@ -1,13 +1,16 @@
 <template> 
   <header class="header">
       <h1>
-          <slot></slot>
+        {{ headerTitle }}
       </h1>
   </header>
 </template>
 <script>
 	export default {
-    name: 'header'
+    name: 'MyHeader',
+    props: {
+      headerTitle: String
+    }
   }
 </script>
 <style lang="scss" scoped>
@@ -23,7 +26,7 @@
     line-height: .44rem;
     h1 {
       font-size: .18rem;
-      color:■#fff;
+      color: ■#fff;
     }
   }
 </style>

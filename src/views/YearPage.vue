@@ -4,14 +4,19 @@
   </div>
 </template>
 <script>
-  import getData from '@/services'
+  	import getData from '@/services'
+  	import { getNowDate } from '@/lib/utils'
 	import { onMounted } from 'vue'
+	import { useStore } from 'vuex'
 	export default {
     name: 'YearPage',
     setup() {
-		  onMounted(() => {
-			  getData('year', '2020')
-		  })
+		const store = useStore(),
+		  	  state = store.state;
+		onMounted(() => {
+			getData(store, 'year', getNowDate('year'));
+		})
+		//console.log(getNowDate('year'))
 	  }
 	}
 </script>

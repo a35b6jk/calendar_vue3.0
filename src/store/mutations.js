@@ -53,4 +53,24 @@ export default {
                 break;
         }
     },
+    setErrorCode(state, errorCode){
+        state.errorCode = errorCode;
+    },
+    setData(state, payload){
+        const { filed, data } = payload;
+        switch(filed){
+            case 'day': 
+                state.dayData = data;
+                break;
+            case 'month': 
+                state.monthData = data;
+                break;
+            case 'year': 
+                state.yearData = data;
+                break;
+            default: 
+                state.dayData = data;
+                break; 
+        }
+    }
 }

@@ -33,12 +33,10 @@
       store.commit('changePlaceHolder', 'day');
       watch(() => {
         return router.currentRoute.value.name;
-      }, (value) => {
-        
+      }, (value) => {        
         store.commit('changeHeaderTitle', value);
         store.commit('changePlaceHolder', value);
         store.commit('changeMaxlength', value);
-        console.log(computed(() => state).value)
       })
       return computed(() => state).value
     }

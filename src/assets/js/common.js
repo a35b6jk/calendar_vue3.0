@@ -6,7 +6,6 @@ window.addEventListener('load', function () {
   FastClick.attach(document.body);
   //用来解决手机端点击300ms的延迟问题
 }, false);
-console.log(document.documentElement.style.fontSize);
 //阻止多触点
 document.documentElement.addEventListener('touchmove', function (event) {
   if (event.touches.length > 1) {

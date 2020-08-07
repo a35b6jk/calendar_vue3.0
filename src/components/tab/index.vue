@@ -25,7 +25,6 @@
             const state = reactive({
                 tabData
             });
-            console.log(tabData)
             return {
                 ...state
             }
